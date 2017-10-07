@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image metadata microservice</title>
+    <style>
+        body {
+            background:#f3f3f3;
+        }
+        div {
+            background:#E2E2E2;
+            width:750px;
+            margin:0 auto;
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>{{ data }}</h1>
+        <form method="POST" action="/upload">
+            <input type="file" name="filetoget">
+            <input type="submit" value="klikzors" name="submit">
+        </form>
+    </div>
+</body>
+</html>

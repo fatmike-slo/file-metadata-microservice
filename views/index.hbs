@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Image metadata microservice</title>
+    <title>{{ title }}</title>
     <style>
         body {
             background:#f3f3f3;
@@ -14,15 +14,34 @@
             width:750px;
             margin:0 auto;
             margin-top:50px;
+            padding:20px;
+        }
+        h1 {
+            margin-bottom:20px;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        form {
+            width:500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        b {
+            background: #F5D5D5;
         }
     </style>
 </head>
 <body>
     <div>
-        <h1>{{ data }}</h1>
-        <form method="POST" action="/upload">
+        <h1>{{ title }}</h1>
+        <p>{{ text }}</p>
+        <p>{{ instructions }} The microservice also accepts only <b>.txt</b> files</p>
+        <hr>
+        <form method="POST" action="/upload" enctype="multipart/form-data">
             <input type="file" name="filetoget">
-            <input type="submit" value="klikzors" name="submit">
+            <input type="submit" value="Get size" name="submit">
         </form>
     </div>
 </body>
